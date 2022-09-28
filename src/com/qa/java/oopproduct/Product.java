@@ -5,9 +5,9 @@ public class Product {
 	int id;
 	String name;
 	double price;
-	byte rating;
+	double rating;
 	double discountPercentage;
-	char isAvailable;
+	boolean isAvailable;
 	
 	
 	//no argument
@@ -19,13 +19,13 @@ public class Product {
 		price = 2.35;
 		rating = 3;
 		discountPercentage = 10;
-		isAvailable = 'Y';
+		isAvailable = true;
 		
 			
 	}
 
 
-	public Product(int id, String name, double price, byte rating, double discountPercentage, char isAvailable) {
+	public Product(int id, String name, double price, double rating, double discountPercentage, boolean isAvailable) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -35,6 +35,22 @@ public class Product {
 		this.isAvailable = isAvailable;
 	}
 	
+	void displayProductInfo() {
+		System.out.println("ID: " + id);
+		System.out.println("Name: " + name);
+		System.out.println("Price: " + "£" + price);
+		System.out.println("Discount: " + discountPercentage);
+		System.out.println("Availability: " + isAvailable);
+		System.out.println("Rating: " + rating);
+		System.out.println();
+	}
 	
+	double productDiscountPrice() {
+		return (price* discountPercentage/100);
+	}
+	
+	double productFinal() {
+		return price - productDiscountPrice();
+	}
 
 }

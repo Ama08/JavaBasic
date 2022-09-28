@@ -7,12 +7,17 @@ public class Main {
 		//creating objects for employee class
 		Employee employee; //a reference variable
 		employee = new Employee(121554, "Nancy", "Marketing", 125364, (byte) 32, 'F' );  //Employee object is created
-		System.out.println("ID: " + employee.id);
-		System.out.println("Department: " + employee.depratment);
-		System.out.println("Gender: "+ employee.gender);
-		System.out.println("Name: " + employee.name);
-		System.out.println("Salary: " + employee.salary);
-		System.out.println("Age: " + employee.age);
+		employee.displayEmploteeInfo();
+		double incremntsalary  = employee.incrementsalary();
+		
+		System.out.println(employee.name + "'s total Salary is : " + employee.totalSalary());
+		
+		/*
+		 * System.out.println("ID: " + employee.id); System.out.println("Department: " +
+		 * employee.depratment); System.out.println("Gender: "+ employee.gender);
+		 * System.out.println("Name: " + employee.name); System.out.println("Salary: " +
+		 * employee.salary); System.out.println("Age: " + employee.age);
+		 */
 		
 		/*employee.id = 1235652;
 		employee.name = "Nancy";
@@ -28,7 +33,12 @@ public class Main {
 		 * employee.salary); System.out.println("Age: " + employee.age);
 		 */
 		
+		
+		
 		Employee employee2 = new Employee(251346, "Mark", "HR", 241656, (byte) 42, 'M');
+		employee2.displayEmploteeInfo();
+		System.out.println(employee2 + "'s incremented salary: " + employee2.incrementsalary());
+		System.out.println(employee2.name + "'s total Salary is: " + employee2.totalSalary());
 		
 		/*employee2.id = 122564;
 		employee2.name = "Mark";
@@ -37,12 +47,12 @@ public class Main {
 		employee2.age = 42; 
 		employee2.gender = 'M';*/
 		
-		System.out.println("ID: " + employee2.id);
-		System.out.println("Department: " + employee2.depratment);
-		System.out.println("Gender: "+ employee2.gender);
-		System.out.println("Name: " + employee2.name);
-		System.out.println("Salary: " + employee2.salary);
-		System.out.println("Age: " + employee2.age);
+		/*
+		 * System.out.println("ID: " + employee2.id); System.out.println("Department: "
+		 * + employee2.depratment); System.out.println("Gender: "+ employee2.gender);
+		 * System.out.println("Name: " + employee2.name); System.out.println("Salary: "
+		 * + employee2.salary); System.out.println("Age: " + employee2.age);
+		 */
 		
 	}
 

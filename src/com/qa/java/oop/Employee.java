@@ -8,6 +8,8 @@ public class Employee {
 	double salary;
 	byte age; 
 	char gender;
+	double incrementPercentage;
+	
 	//Each employee object will have its own state
 	
 	
@@ -30,10 +32,26 @@ public class Employee {
 		this.salary = salary;
 		this.age = age;
 		this.gender = gender;
+		this.incrementPercentage = incrementPercentage;
+		
 	}
-	
+	 void displayEmploteeInfo() {
+		    System.out.println("ID: " + id);
+			System.out.println("Department: " + depratment);
+			System.out.println("Gender: "+ gender);
+			System.out.println("Name: " + name);
+			System.out.println("Salary: " + salary);
+			System.out.println("Age: " + age);
+	 }
 	//arg constructor 
 	
+	 double incrementsalary() {
+		 return(salary*incrementPercentage/100);
+	 }
 	
+	 double totalSalary() {
+		 
+		 return salary + incrementsalary();
+	 }
 
 }
